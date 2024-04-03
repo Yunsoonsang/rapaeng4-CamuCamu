@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    environment {
+        imageName = 'andrewyss/prod'
+        initialTag = '1.0'
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'master',
+                    credentialsId: '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',
+                    url: 'https://github.com/Yunsoonsang/rapaeng4-CI.git'
+            }
+        }
+        stage('image build and push') {
+            steps {
+                script {
+                    // BUILD_NUMBER는 젠킨스에서 제공하는 환경변수로 동적으로 태그 번호를 업그레이드 할 수 있다.
+                    def newTag = "${initialTag}.${BUILD_NUMBER}"
+                    sh "sudo docker build -t ${imageName}:${newTag} -f Dockerfile.prod ."
+                    sh "sudo docker push ${imageName}:${newTag}"
+                    initialTag = newTag // 베이스 태그 번호를 업데이트 1.0 -> 1.1
+                }
+            }
+        }
+        
+    }
+}
