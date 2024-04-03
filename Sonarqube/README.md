@@ -1,5 +1,3 @@
-# 소나 큐브 (SonarQube)에 대한 README
-
 ## JDK 17 설치하기
 
 ```bash
