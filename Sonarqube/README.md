@@ -7,7 +7,7 @@ sudo apt install openjdk-17-jdk
 java -version
 # 환경변수 추가하기
 PATH=$PATH:/usr/lib/jvm/java-17-openjdk-amd64/bin/
-
+```
 ## 도커 컴포즈 배포 전에 사전 작업
 
 1. `/etc/sysctl.conf` 파일 열기
