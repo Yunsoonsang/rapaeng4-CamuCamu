@@ -93,4 +93,4 @@ PATH=$PATH:/usr/lib/jvm/java-17-openjdk-amd64/bin/
 3. **소나 큐브의 초기 계정 정보 ⇒ admin / admin**
 
 ## 코드 분석 결과
-[![코드 분석 결과](../png/code-analysis.png)](../png/code-analysis.png)
+[![코드 분석 결과](../etc/code-analysis.png)](../etc/code-analysis.png)

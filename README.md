@@ -1,4 +1,4 @@
-[![코드 분석 결과](png/poster.jpg)](png/poster.jpg)
+[![코드 분석 결과](png/poster.jpg)](etc/poster.jpg)
 
 # RAPA KAKAO ENG 4 - k8s toy project
 카카오 클라우드 스쿨 엔지니어 4기 - 윤순상, 유성욱, 유태균, 권재성, 김태교
@@ -28,4 +28,4 @@
 - GitHub, ngrok
 
 ## PT
-[Open Presentation PDF](presentation-file/CamuCamu.pdf)
+[Open Presentation PDF](etc/CamuCamu.pdf)
