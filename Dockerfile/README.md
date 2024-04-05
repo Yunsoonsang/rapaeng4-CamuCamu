@@ -1,6 +1,4 @@
-## Docker 파일
-
-### Dockerfile.dev
+## Dockerfile.dev
 
 ```Dockerfile
 # Dockerfile.dev
@@ -19,7 +17,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### Dockerfile.prod
+## Dockerfile.prod
 
 ```Dockerfile
 # Dockerfile.prod
