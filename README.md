@@ -26,4 +26,4 @@
 - GitHub, ngrok
 
 ## PT
-[![Presentation file](presentation-file/CamuCamu.pdf)](presentation-file/CamuCamu.pdf)
+[Download Presentation PDF](presentation-file/CamuCamu.pdf)
