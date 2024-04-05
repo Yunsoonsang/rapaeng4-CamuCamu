@@ -35,8 +35,61 @@ PATH=$PATH:/usr/lib/jvm/java-17-openjdk-amd64/bin/
     docker volume create postgresql
     docker volume create postgresql_data
     ```
+## 도커 컴포즈 배포 및 주의사항
 
-5. **절대 소나큐브에 한글 플러그인 같은 추가 설정 설치 하지 말기! - 소나큐브 망가짐**
+1. 컴포즈 실행하기 => docker-compose -d up
 
-6. **소나 큐브의 초기 계정 정보 ⇒ admin / admin**
+    ```YAML
+    version: "3.7"
 
+    services:
+    sonarqube:
+        image: sonarqube:community
+        hostname: sonarqube
+        container_name: sonarqube
+        depends_on:
+        - db
+        restart: always
+        environment:
+        SONAR_JDBC_URL: jdbc:postgresql://db:5432/sonar
+        SONAR_JDBC_USERNAME: sonar
+        SONAR_JDBC_PASSWORD: sonar
+        volumes:
+        - sonarqube_data:/opt/sonarqube/data
+        - sonarqube_extensions:/opt/sonarqube/extensions
+        - sonarqube_logs:/opt/sonarqube/logs
+        ports:
+        - "9000:9000"
+
+    db:
+        image: postgres:12.18-alpine3.19
+        hostname: postgresql
+        container_name: postgresql
+        restart: always
+        environment:
+        POSTGRES_USER: sonar
+        POSTGRES_PASSWORD: sonar
+        POSTGRES_DB: sonar
+        volumes:
+        - postgresql:/var/lib/postgresql
+        - postgresql_data:/var/lib/postgresql/data
+
+    volumes:
+    sonarqube_data:
+        external: true
+    sonarqube_extensions:
+        external: true
+    sonarqube_logs:
+        external: true
+    postgresql:
+        external: true
+    postgresql_data:
+        external: true    
+    ```
+
+
+2. **절대 소나큐브에 한글 플러그인 같은 추가 설정 설치 하지 말기! - 소나큐브 망가짐**
+
+3. **소나 큐브의 초기 계정 정보 ⇒ admin / admin**
+
+## 코드 분석 결과
