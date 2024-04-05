@@ -1,5 +1,5 @@
 ## Continuous Integration (CI) Automation Pipeline
-```Jenkinsfile
+```Groovy
 pipeline {
     agent any
     environment {
@@ -71,7 +71,7 @@ pipeline {
 }
 ```
 ## Prod build pipeline (not auto)
-```Jenkinsfile
+```Groovy
 pipeline {
     agent any
     environment {
