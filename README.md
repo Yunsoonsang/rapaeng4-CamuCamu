@@ -24,3 +24,6 @@
 - ArgoCD, MetalLB
 - React
 - GitHub, ngrok
+
+## PT
+[![Presentation file](presentation-file/CamuCamu.pdf)](presentation-file/CamuCamu.pdf)
