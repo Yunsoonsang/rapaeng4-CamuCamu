@@ -1,4 +1,4 @@
-## Continuous Integration (CI) Automation Pipeline
+## **Continuous Integration (CI) Automation Pipeline**
 ```Groovy
 pipeline {
     agent any
@@ -70,7 +70,7 @@ pipeline {
     }
 }
 ```
-## Prod build pipeline (not auto)
+## **Prod build pipeline (not auto)**
 ```Groovy
 pipeline {
     agent any
@@ -101,4 +101,4 @@ pipeline {
     }
 }
 ```
-### Check [here](https://github.com/Yunsoonsang/rapaeng4-CI.git) for the GitHub information used in the pipeline.
+### **Check [here](https://github.com/Yunsoonsang/rapaeng4-CI.git) for the GitHub information used in the pipeline.**
