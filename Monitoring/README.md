@@ -1,1 +1,1 @@
-[![모니터링 아키텍처](../etc/monitoring-Architecture.png)](../etc/monitoring-Architecture.png)
+[![모니터링 아키텍처](../etc/monitoring-architecture.png)](../etc/monitoring-architecture.png)
